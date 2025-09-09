@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Демченко Влад</title>
+    <style>
+      /* Общие стили */
+       *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         box-shadow: 0;
+         font-family: "Trebuchet MS";
+       }
+       body{
+         line-height: 1.6;
+         color: #333;
+         background-color: #f9f9f9;
+       }
+       section {padding: 80px 0;}
+       .container {
+         max-width: 1200px;
+         margin-top: 0px;
+         margin-right: auto;
+         margin-bottom: 0px;
+         margin-left: auto;
+         padding-top: 0px;
+         padding-right: 20px;
+         padding-bottom: 0px;
+         padding-left: 20px;
+       }
+       h2{
+         font-size: 2.5rem;
+         margin-bottom: 30px;
+         text-align: center;
+         position: relative;
+         color: #2c3e50
+       }
+       h2::after {
+           content: '';
+           display: block;
+           width: 250px;
+           height: 4px;
+           background: #3498db;
+           margin-right: auto;
+           margin-left: auto;
+           margin-top: 10px;
+           margin-bottom: 10px;
+           border-radius: 10px;
+       }
+       h3{
+         margin-bottom: 15px;
+         color: #2c3e50
+       }
+
+      /* Хедер с превью */
+      .header-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1200%;
+        height: 100%;
+        opacity: 0.5;
+        background-image: url("C:/Users/vsd22/Desktop/Off/tile_background.png");
+        background-size: 2000px;
+
+      }
+      .header-content {
+        position: relative;
+        z-index: 1;
+      }
+      header{
+        color: white;
+        background: -webkit-linear-gradient(135deg, rgb(51, 115, 240), rgb(23, 193, 199));
+        background: -moz-linear-gradient(135deg, rgb(51, 115, 240), rgb(23, 193, 199));
+        background: linear-gradient(135deg, rgb(51, 115, 240), rgb(23, 193, 199));
+        text-align: center;
+        position: relative;
+        padding-top: 120px;
+        padding-right: 0px;
+        padding-left: 0px;
+        padding-bottom: 120px;
+        overflow: hidden;
+      }
+      header h1{
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+      }
+      header p{
+        font-size: 1.5rem;
+        margin: auto;
+        max-width: 500px;
+      }
+
+      /*  Обо мне и мотивационное письмо*/
+      .about {background-color: white;}
+      .about-text{
+        flex: 1;
+        min-width: 300px;
+      }
+      .about-content{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      .about-image{
+        flex: 1;
+        min-width: 300px;
+        height: 400px;
+
+        background-color: #eee;
+        background-image: url("C:/Users/vsd22/Desktop/Off/photo.jpg");
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #777;
+      }
+
+      /* Видео */
+      .video{
+        background-color: #f5f5f5;
+        align-items: center;
+      }
+
+      /*  Портфолио */
+      .portfolio{background-color: white}
+      .portfolio-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 30px;
+      }
+      .portfolio-project{
+        background: #f5f5f5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .portfolio-info{
+        padding: 20px;
+      }
+      .portfolio-image {
+        height: 160px;
+        background-image: url("Project-android.png");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .portfolio-image2 {
+        height: 160px;
+        background-image: url("Project-site.png");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+
+      /*  Навыки */
+      .skills{background-color: #f5f5f5}
+      .skills-container{
+        grid-gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+      .skill{
+        text-align: center;
+        padding: 40px;
+        border-radius: 10px;
+        background: white;
+      }
+      .skill-style-good{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: LimeGreen;
+      }
+      .skill-style-medium{
+        font-size: 3rem;
+        margin-bottom: 20px;
+        color: Orange;
+      }
+      .skill-good{
+        background-color: LimeGreen;
+        margin-top: 10px;
+        margin-left:20px;
+        width: 145px;
+        height: 25px;
+        border-radius: 3px;
+      }
+      .skill-medium{
+        background-color: Orange;
+        margin-top: 10px;
+        margin-left:20px;
+        width: 145px;
+        height: 25px;
+        border-radius: 3px;
+      }
+
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <!--Превью блок-->
+    <header>
+      <div class="header-bg"></div>
+      <div class="container header-content" style="color: white">
+        <h1>Демченко Владислав</h1>
+        <p>Политеха мы элита гордо носим флаг ИШИТРа</p>
+      </div>
+    </header>
+    <!--Обо мне-->
+    <section id="about" class="about">
+       <div class="container">
+         <h2>Обо мне</h2>
+         <div class="about-content">
+           <div class="about-text">
+             <p>Привет! Меня зовут Влад, я влюбился в IT с тех пор, как сделал свою первую простую игру в блочной среде программирования примерно в 14 лет. Теперь я усовершенствовал свои знания, выбрал основной сферой деятельности язык Java и разработал несколько важных для меня проектов. Я с детства считал себя очень дружелюбным, всегда умел работать в команде, даже основные проекты в которых я участвовал были разработаны в команде верных друзей.</p>
+           </div>
+           <div class="about-image">
+           </div>
+         </div>
+       </div>
+    </section>
+    <!--Мотивационное письмо-->
+    <section id="about" class="about">
+       <div class="container">
+         <h2>Мотивационное письмо</h2>
+         <div class="about-content">
+           <div class="about-text">
+             <p style="font-size: 1.3rem; line-height: 1.9;">Ещё в подростковом возрасте я начал знакомится с IT сферой, с каждым годом я все больше понимал, что это сфера, с которой я хочу связать свою жизнь. Почему на программу ТОП-ИТ должны взять именно меня? Я обожаю работать в команде, с 11 лет ходил на командный вид спорта водное поло, где мы с командой очень сдружились и работы вместе, итоговый проект в 9 и 10 классе защищал вместе с группой друзей, где мы разработали мобильное Android приложение, которое парсила fb2 формат и выводило его в виде книги. Каждая работа с людьми для меня вызывает большой интерес, мне нравится работать в группе, разделять задания, получать ВМЕСТЕ опыт и крупный результат (ощущение “сделанно вместе” – самое будоражащие). Кроме того, мне до безумия нравится учиться. Я обожаю погружаться в новые темы, люблю получать новые знания даже не в IT сфере, история, физика, математика, философия, мои любимые дисциплины. Считаю себя человеком умеющим концентрироваться на задаче, выполнять дедлайны и методично работать.  Именно поэтому я хочу попасть на программу ТОП-ИТ, для меня это идеальный старт в моей карьере             </p>
+             <p style="font-size: 1.3rem; line-height: 1.9">Как же я вижу свое будущее в IT? Я хочу выбрать путь разработчика-универсала(fullstack-разработчик), который понимает и backend, и frontend, также готовый быть team lead-ом в небольшом проекте. В перспективе вырасти в tech lead или software architect, который не просто пишет код, а определяет технологический stack проекта, разрабатывает стандарты разработки. Хочется работать над сложными, масштабными системами – будь то высоко нагруженные сервисы, инструменты для анализа данных или платформы для совместной работы. Создавать программы в абсолютно разных сферах (системное, научное, прикладное, инструментальное ПО) и каждый день развиваться в этом – моя цель, к которой я иду! Программа ТОП-ИТ станет для меня важным шагом на моем пути, дав необходимые знания и практический опыт             </p>
+         </div>
+       </div>
+    </section>
+    <!-- Видео-->
+    <section id="video" class="video">
+      <div class="container">
+        <h2>Видео эссе</h2>
+        <div style="max-width: 100%; overflow: hidden; border-radius: 10px;">
+          <video src="C:\Users\vsd22\Desktop\Off\cat.mp4" preload controls style="width: 100%; height: auto; max-width: 100%; display: block;"></video>
+        </div>
+      </div>
+    </section>
+    <!-- Портфолио-->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+        <h2>Портфолио</h2>
+        <div class="portfolio-grid">
+          <div class="portfolio-project">
+            <div class="portfolio-image"></div>
+            <div class="portfolio-info">
+              <h3>Читалка</h3>
+              <p>Android приложение которое парсила и выводило формат книг fb2, разработанная на языке Java</p>
+            </div>
+          </div>
+          <div class="portfolio-project">
+            <div class="portfolio-image2"></div>
+            <div class="portfolio-info">
+              <h3>Сайт-визитка</h3>
+              <p>Сайт-визитка для конкурса на программу ТОП-ИТ в ТПУ, разработанная только с помощью HTML5/CSS3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Навыки-->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Навыки</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <div class="skill-style-good">Java</div>
+            <h3>Android разработка</h3>
+            <p>Разработка приложений в Android Studio</p>
+          </div>
+          <div class="skill">
+            <div class="skill-style-medium" >HTML</div>
+            <h3>Разработка сайтов</h3>
+            <p>Знание базовой верстки и создания веб-страниц</p>
+          </div>
+          <div class="skill">
+            <div class="skill-style-medium" >C#</div>
+            <h3>Базовый синтаксис</h3>
+            <p>Понимание основных языковых конструкций</p>
+          </div>
+          <div class="skill">
+            <div class="skill-style-medium" >Python</div>
+            <h3>Базовый синтаксис</h3>
+            <p>Понимание основных языковых конструкций</p>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+  </body>
+</html>
